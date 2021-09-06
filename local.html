@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Twoside Test</title>
+		<style>
+			body {
+				font-family : monospace;
+			}
+			#PositionSlider {
+				width : 70%;
+			}
+		</style>
+		<script type="text/javascript" src="src/music.js"></script>
+		<script type="text/javascript" src="EDITME.js"></script>
+	</head>
+	<body>
+		<h1>Local Twoside Jam Test</h1>
+		<audio id="MusicRed" preload="auto" controls="none" style="display:none"></audio>
+		<audio id="MusicBlue" preload="auto" controls="none" style="display:none"></audio>
+		<audio id="MusicGreen" preload="auto" controls="none" style="display:none"></audio>
+		<audio id="MusicYellow" preload="auto" controls="none" style="display:none"></audio>
+		
+		<h2>Control</h2>
+		<input type="range" id="PositionSlider" min="0.00" max="1.00" step="any" value="0">
+		<span id="PositionDisplay">--</span>
+		<br>
+		<button onclick="togglePause()">Play/Pause</button>
+		<button id="ButtonSideRed" onclick="switchSide(RED)">Red</button>
+		<button id="ButtonSideBlue" onclick="switchSide(BLUE)">Blue</button>
+		<button id="ButtonSideGreen" onclick="switchSide(GREEN)">Green</button>
+		<button id="ButtonSideYellow" onclick="switchSide(YELLOW)">Yellow</button>
+		<br>
+		<script>
+			initMusic();
+			setMusic();
+		</script>
+	</body>
+</html>
