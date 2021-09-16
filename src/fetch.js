@@ -25,9 +25,8 @@ function fetchMusic() {
 
 function getJSON(url, listen) {
 	var httpReq = new XMLHttpRequest(); // a new request
-	httpReq.addEventListener("load", ret=>{
-		console.log(ret);
-		listen(JSON.parse(ret))
+	httpReq.addEventListener("load", evie=>{
+		listen(JSON.parse(hrrpReq.response))
 	});
 	httpReq.open("GET", url, true);
 	httpReq.send(null);
