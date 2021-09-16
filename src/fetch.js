@@ -3,7 +3,7 @@ var inputRed, inputBlue, inputGreen, inputYellow, inputStart, inputEnd;
 
 function initFetchUI() {
 	inputRed = document.getElementById("InputRed");
-	inputRed = document.getElementById("InputBlue");
+	inputBlue = document.getElementById("InputBlue");
 	inputGreen = document.getElementById("InputGreen");
 	inputYellow = document.getElementById("InputYellow");
 }
@@ -26,7 +26,7 @@ function fetchMusic() {
 function getJSON(url, listen) {
 	var httpReq = new XMLHttpRequest(); // a new request
 	httpReq.addEventListener("load", evie=>{
-		listen(JSON.parse(hrrpReq.response))
+		listen(JSON.parse(httpReq.response))
 	});
 	httpReq.open("GET", url, true);
 	httpReq.send(null);
