@@ -13,7 +13,7 @@
 			}
 		</style>
 		<script type="text/javascript" src="src/music.js"></script>
-		<script type="text/javascript" src="EDITME.js"></script>
+		<script type="text/javascript" src="src/fetch.js"></script>
 	</head>
 	<body>
 		<h1>Local Twoside Jam Test</h1>
@@ -33,11 +33,18 @@
 		<button id="ButtonSideYellow" onclick="switchSide(YELLOW)">Yellow</button>
 		<br>
 		
-		<h2>Instructions</h2>
-		<p>To use this tool to test your own compositions, you must download it. </p>
+		<h2>Fetch</h2>
+		<input type="text"></input>
+		<br>
+		Red ID: <input id="InputRed" type="text"></input><br>
+		Blue ID: <input id="InputBlue" type="text"></input><br>
+		Start: <input id="InputStart" type="text"></input><br>
+		End: <input id="InputEnd" type="text"></input><br>
+		<button id="ButtonFetch" onclick="fetchMusic()">Fetch</button>
 		<script>
 			initMusic();
-			setMusic();
+			initFetchUI();
+			//setMusic();
 		</script>
 	</body>
 </html>
